@@ -1,0 +1,54 @@
+body {
+    background: #111;
+}
+
+#container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 40px;
+}
+
+#container #socialmedia {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #333;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    place-items: center;
+    transition: 500ms;
+}
+
+#container #socialmedia i {
+    font-size: 30px;
+    transition: 400ms;
+}
+
+#container #socialmedia:nth-child(1):hover {
+    color: #52b1dc;
+}
+
+#container #socialmedia:nth-child(2):hover {
+    color: #c82750;
+}
+
+#container #socialmedia:nth-child(3):hover {
+    color: #1c9cea;
+}
+
+#container #socialmedia:nth-child(4):hover {
+    color: #f70000;
+}
+
+#container #socialmedia:hover {
+    background: #666;
+}

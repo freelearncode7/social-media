@@ -1,0 +1,93 @@
+body {
+  background: #111;
+}
+#container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  gap: 40px;
+}
+#container #socialmedia {
+  position: relative;
+  width: 70px;
+  height:70px;
+  background:#333;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  color:white;
+  text-decoration: none;
+  place-items: center;
+  transition:500ms;
+}
+#container #socialmedia i {
+  font-size: 30px;
+  transition: 400ms;
+}
+#container #socialmedia::after{
+  content:attr(name);
+  position:absolute;
+  left: 0;
+  top: -50px;
+  min-width:100%;
+  border-radius:10px;
+  height: 40px;
+  background:#333; 
+  display:flex;
+  justify-content: center;
+  place-items: center;
+  font-family: font;
+  font-size: 17px;
+  color:white;
+  padding: 0px 5px 0px 5px;
+  transform: scale(0);
+}
+#container #socialmedia:hover:after{
+  animation: show 400ms 1 forwards;
+}
+#container #socialmedia:nth-child(1):after{
+  background:#52b1dc  ;
+}
+#container #socialmedia:nth-child(2):after{
+  background:#c82750 ;
+}
+#container #socialmedia:nth-child(3):after{
+  background:#1c9cea ;
+}
+#container #socialmedia:nth-child(4):after{
+  background:#f70000;
+}
+#container #socialmedia:nth-child(1):hover{
+  color:#52b1dc  ;
+}
+#container #socialmedia:nth-child(2):hover{
+  color:#c82750 ;
+}
+#container #socialmedia:nth-child(3):hover{
+  color:#1c9cea ;
+}
+#container #socialmedia:nth-child(4):hover{
+  color:#f70000;
+}
+#container #socialmedia:hover{
+  background:#666;
+}
+@keyframes show {
+  from {
+    top: 0;
+    transform:scale(0);
+  }
+  to {
+    top: -50px;
+    transform:scale(1);
+  }
+}
+@font-face {
+  font-family: font;
+  src: url(../fonts/IRANSansDN-Bold.ttf);
+}
